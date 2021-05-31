@@ -1,0 +1,32 @@
+body {
+  background-image: linear-gradient(to left, #ff99cc, #ffff99);
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+}
+
+h1 {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+  font-size: 13px;
+}
+
+.buttons {
+  display: flex;
+  margin: 15px 0px;
+}
+
+.click {
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #d6d6c2;
+  padding: 5px 8px;
+}
