@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 
-var moviesec = {
+const moviesec = {
   action: [
     {
       image:
@@ -67,19 +67,14 @@ export default function App() {
 
       <div className="buttons">
         {Object.keys(moviesec).map((movie) => (
-          <button className="click" onclick={() => movieClickHandler(movie)}>
+          <button
+            className="click"
+            onClick={() => movieClickHandler(movie)}
+            key={movie}
+          >
             {movie}
           </button>
         ))}
-        {/* <button onclick={movieClickHandler} className="click">
-          action
-        </button>
-        <button onclick={movieClickHandler} className="click">
-          comedy
-        </button>
-        <button onclick={movieClickHandler} className="click">
-          drama
-        </button> */}
       </div>
       <hr />
       <div className="section">
@@ -89,7 +84,7 @@ export default function App() {
               <div>
                 <img src={same.image} alt="" />
               </div>
-              <div>
+              <div className="innersection">
                 <h2>{same.name}</h2>
                 <h4>{same.rating}/10</h4>
                 <a href={same.link}>Click here to watch trailer</a>
