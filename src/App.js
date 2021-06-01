@@ -84,8 +84,18 @@ export default function App() {
       <hr />
       <div className="section">
         <ul>
-          <li></li>
-          <li></li>
+          {moviesec[selectedmovie].map((same) => (
+            <li key={same.name}>
+              <div>
+                <img src={same.image} alt="" />
+              </div>
+              <div>
+                <h2>{same.name}</h2>
+                <h4>{same.rating}/10</h4>
+                <a href={same.link}>Click here to watch trailer</a>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
